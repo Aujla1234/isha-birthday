@@ -1,0 +1,2035 @@
+/* =====================================================
+   ISHA BIRTHDAY WEBSITE
+   "Isha.exe ❤️"
+===================================================== */
+
+
+/* ===============================
+   RESET
+================================ */
+
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+
+font-family:"Poppins",sans-serif;
+
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#cfe8ff,
+
+#ffd6f6
+
+);
+
+
+
+color:#333;
+
+
+overflow-x:hidden;
+
+
+}
+
+
+
+
+
+/* ===============================
+   LOADING SCREEN
+================================ */
+
+
+#loader{
+
+
+position:fixed;
+
+
+inset:0;
+
+
+background:
+
+
+linear-gradient(
+
+135deg,
+
+#8ed6ff,
+
+#ffc7ef
+
+);
+
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+z-index:99999;
+
+
+}
+
+
+
+
+
+.loading-phone{
+
+
+width:320px;
+
+
+padding:40px 25px;
+
+
+background:
+
+rgba(255,255,255,.25);
+
+
+backdrop-filter:
+
+blur(20px);
+
+
+border-radius:40px;
+
+
+text-align:center;
+
+
+box-shadow:
+
+0 30px 80px rgba(0,0,0,.2);
+
+
+}
+
+
+
+
+
+.phone-top{
+
+
+width:80px;
+
+
+height:8px;
+
+
+background:#333;
+
+
+border-radius:20px;
+
+
+margin:auto auto 30px;
+
+
+}
+
+
+
+
+.loading-phone h2{
+
+
+font-family:"Pacifico",cursive;
+
+
+font-size:40px;
+
+
+color:#ff4fa3;
+
+
+}
+
+
+
+
+
+.loading-phone p{
+
+
+margin:20px 0;
+
+
+}
+
+
+
+
+
+.loading-bar{
+
+
+height:12px;
+
+
+background:
+
+rgba(255,255,255,.5);
+
+
+border-radius:30px;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+
+
+.loading-progress{
+
+
+height:100%;
+
+
+width:0;
+
+
+background:
+
+
+linear-gradient(
+
+90deg,
+
+#ff5ebc,
+
+#7bdcff
+
+);
+
+
+
+animation:
+
+load 4s forwards;
+
+
+}
+
+
+
+
+@keyframes load{
+
+
+from{
+
+width:0;
+
+}
+
+
+to{
+
+width:100%;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   BACKGROUND CLOUDS
+================================ */
+
+
+.cloud{
+
+
+position:fixed;
+
+
+background:white;
+
+
+opacity:.7;
+
+
+border-radius:100px;
+
+
+z-index:-1;
+
+
+}
+
+
+
+.cloud1{
+
+
+width:250px;
+
+
+height:80px;
+
+
+top:15%;
+
+
+left:-100px;
+
+
+animation:
+
+cloudMove 20s infinite linear;
+
+
+}
+
+
+
+.cloud2{
+
+
+width:180px;
+
+
+height:60px;
+
+
+top:45%;
+
+
+right:-80px;
+
+
+animation:
+
+cloudMove 25s infinite linear;
+
+
+}
+
+
+
+.cloud3{
+
+
+width:300px;
+
+
+height:90px;
+
+
+top:75%;
+
+
+left:-150px;
+
+
+animation:
+
+cloudMove 30s infinite linear;
+
+
+}
+
+
+
+
+
+@keyframes cloudMove{
+
+
+from{
+
+transform:translateX(0);
+
+}
+
+
+to{
+
+transform:translateX(120vw);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   MUSIC BUTTON
+================================ */
+
+
+#musicButton{
+
+
+position:fixed;
+
+
+right:25px;
+
+
+bottom:25px;
+
+
+width:60px;
+
+
+height:60px;
+
+
+border-radius:50%;
+
+
+border:none;
+
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#ff77c8,
+
+#78d8ff
+
+);
+
+
+
+color:white;
+
+
+font-size:22px;
+
+
+z-index:100;
+
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.2);
+
+
+}
+
+
+
+
+
+/* ===============================
+   HERO
+================================ */
+
+
+.hero{
+
+
+height:100vh;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+text-align:center;
+
+
+padding:20px;
+
+
+}
+
+
+
+
+
+.hero-content{
+
+
+animation:
+
+appear 2s ease;
+
+
+}
+
+
+
+
+
+@keyframes appear{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+.small-title{
+
+
+font-size:20px;
+
+
+color:#777;
+
+
+}
+
+
+
+
+
+.hero h1{
+
+
+font-family:"Pacifico",cursive;
+
+
+font-size:
+
+clamp(45px,8vw,90px);
+
+
+color:#ff4fa3;
+
+
+text-shadow:
+
+0 0 20px rgba(255,80,160,.4);
+
+
+}
+
+
+
+
+
+.hero h2{
+
+
+font-size:30px;
+
+
+margin-top:20px;
+
+
+color:#555;
+
+
+}
+
+
+
+
+
+.description{
+
+
+font-size:20px;
+
+
+margin:30px;
+
+
+}
+
+
+
+
+#startStory{
+
+
+padding:
+
+15px 40px;
+
+
+border-radius:50px;
+
+
+border:none;
+
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#ff5ebc,
+
+#7bdcff
+
+);
+
+
+
+color:white;
+
+
+font-size:18px;
+
+
+cursor:pointer;
+
+
+transition:.4s;
+
+
+}
+
+
+
+#startStory:hover{
+
+
+transform:
+
+scale(1.08);
+
+
+}
+
+
+
+
+/* =====================================================
+   CHAT SECTION
+===================================================== */
+
+
+.chat-section{
+
+
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    .chat-section h2,
+    
+    
+    .height-section h2,
+    
+    
+    .quiz-section h2,
+    
+    
+    .memory-section h2,
+    
+    
+    .love-section h2,
+    
+    
+    .anger-section h2,
+    
+    
+    .level-section h2,
+    
+    
+    .secret-section h2{
+    
+    
+    font-family:"Pacifico",cursive;
+    
+    
+    font-size:45px;
+    
+    
+    color:#ff4fa3;
+    
+    
+    margin-bottom:50px;
+    
+    
+    }
+    
+    
+    
+    
+    .phone{
+    
+    
+    width:350px;
+    
+    
+    margin:auto;
+    
+    
+    background:#fff;
+    
+    
+    border-radius:35px;
+    
+    
+    padding:20px;
+    
+    
+    box-shadow:
+    
+    0 30px 70px rgba(0,0,0,.15);
+    
+    
+    }
+    
+    
+    
+    
+    
+    .phone-header{
+    
+    
+    background:
+    
+    linear-gradient(
+    
+    90deg,
+    
+    #ff77c8,
+    
+    #7bdcff
+    
+    );
+    
+    
+    
+    padding:15px;
+    
+    
+    border-radius:25px;
+    
+    
+    color:white;
+    
+    
+    font-weight:bold;
+    
+    
+    }
+    
+    
+    
+    .chat-box{
+    
+    
+    padding:20px;
+    
+    
+    display:flex;
+    
+    
+    flex-direction:column;
+    
+    
+    gap:20px;
+    
+    
+    }
+    
+    
+    
+    
+    .message{
+    
+    
+    padding:15px 20px;
+    
+    
+    border-radius:25px;
+    
+    
+    max-width:80%;
+    
+    
+    line-height:1.5;
+    
+    
+    font-size:15px;
+    
+    
+    }
+    
+    
+    
+    .left{
+    
+    
+    background:#eee;
+    
+    
+    align-self:flex-start;
+    
+    
+    }
+    
+    
+    
+    
+    .right{
+    
+    
+    background:#7bdcff;
+    
+    
+    color:white;
+    
+    
+    align-self:flex-end;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .special{
+    
+    
+    background:#ffd6f6;
+    
+    
+    color:#ff4fa3;
+    
+    
+    align-self:center;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    
+    /* =====================================================
+       HEIGHT METER
+    ===================================================== */
+    
+    
+    .height-section{
+    
+    
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .height-machine{
+    
+    
+    display:flex;
+    
+    
+    justify-content:center;
+    
+    
+    align-items:center;
+    
+    
+    gap:30px;
+    
+    
+    }
+    
+    
+    
+    
+    .meter{
+    
+    
+    height:350px;
+    
+    
+    width:60px;
+    
+    
+    background:
+    
+    rgba(255,255,255,.6);
+    
+    
+    border-radius:40px;
+    
+    
+    overflow:hidden;
+    
+    
+    border:5px solid white;
+    
+    
+    }
+    
+    
+    
+    
+    #heightFill{
+    
+    
+    height:0;
+    
+    
+    width:100%;
+    
+    
+    background:
+    
+    linear-gradient(
+    
+    #ff4fa3,
+    
+    #7bdcff
+    
+    );
+    
+    
+    
+    transition:2s;
+    
+    
+    }
+    
+    
+    
+    
+    #heightText{
+    
+    
+    font-size:25px;
+    
+    
+    font-weight:600;
+    
+    
+    }
+    
+    
+    
+    
+    
+    #measureButton{
+    
+    
+    margin-top:40px;
+    
+    
+    padding:15px 40px;
+    
+    
+    border-radius:50px;
+    
+    
+    border:none;
+    
+    
+    background:#ff5ebc;
+    
+    
+    color:white;
+    
+    
+    font-size:18px;
+    
+    
+    cursor:pointer;
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* =====================================================
+       QUIZ
+    ===================================================== */
+    
+    
+    .quiz-section{
+    
+    
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    .quiz-card{
+    
+    
+    max-width:600px;
+    
+    
+    margin:auto;
+    
+    
+    background:
+    
+    rgba(255,255,255,.5);
+    
+    
+    backdrop-filter:
+    
+    blur(20px);
+    
+    
+    padding:40px;
+    
+    
+    border-radius:30px;
+    
+    
+    box-shadow:
+    
+    0 20px 50px rgba(0,0,0,.1);
+    
+    
+    }
+    
+    
+    
+    
+    
+    .options{
+    
+    
+    display:flex;
+    
+    
+    flex-direction:column;
+    
+    
+    gap:20px;
+    
+    
+    margin-top:30px;
+    
+    
+    }
+    
+    
+    
+    
+    .answer{
+    
+    
+    padding:15px;
+    
+    
+    border-radius:20px;
+    
+    
+    border:none;
+    
+    
+    background:white;
+    
+    
+    cursor:pointer;
+    
+    
+    font-size:17px;
+    
+    
+    transition:.3s;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .answer:hover{
+    
+    
+    background:#ffb7df;
+    
+    
+    transform:
+    
+    scale(1.05);
+    
+    
+    }
+    
+    
+    
+    
+    
+    #quizResult{
+    
+    
+    margin-top:30px;
+    
+    
+    font-size:20px;
+    
+    
+    color:#ff4fa3;
+    
+    
+    }
+    
+    
+    
+    
+    
+    /* =====================================================
+       MEMORY POLAROIDS
+    ===================================================== */
+    
+    
+    .memory-section{
+    
+    
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .polaroid-wall{
+    
+    
+    display:flex;
+    
+    
+    justify-content:center;
+    
+    
+    flex-wrap:wrap;
+    
+    
+    gap:40px;
+    
+    
+    }
+    
+    
+    
+    
+    .polaroid{
+    
+    
+    background:white;
+    
+    
+    padding:15px;
+    
+    
+    width:250px;
+    
+    
+    box-shadow:
+    
+    0 20px 40px rgba(0,0,0,.15);
+    
+    
+    transform:
+    
+    rotate(-3deg);
+    
+    
+    transition:.5s;
+    
+    
+    }
+    
+    
+    
+    
+    .polaroid:nth-child(even){
+    
+    
+    transform:
+    
+    rotate(4deg);
+    
+    
+    }
+    
+    
+    
+    
+    .polaroid:hover{
+    
+    
+    transform:
+    
+    translateY(-20px)
+    rotate(0);
+    
+    
+    }
+    
+    
+    
+    .polaroid img{
+    
+    
+    width:100%;
+    
+    
+    height:250px;
+    
+    
+    object-fit:cover;
+    
+    
+    }
+    
+    
+    
+    
+    .polaroid p{
+    
+    
+    padding:20px 5px;
+    
+    
+    font-family:"Pacifico",cursive;
+    
+    
+    color:#555;
+    
+    
+    }
+    
+    
+    
+    
+/* =====================================================
+   LOVE BUBBLES
+===================================================== */
+
+
+.love-section{
+
+
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    .bubble-container{
+    
+    
+    display:flex;
+    
+    
+    justify-content:center;
+    
+    
+    flex-wrap:wrap;
+    
+    
+    gap:40px;
+    
+    
+    }
+    
+    
+    
+    .love-bubble{
+    
+    
+    width:180px;
+    
+    
+    height:180px;
+    
+    
+    border-radius:50%;
+    
+    
+    background:
+    
+    
+    linear-gradient(
+    
+    135deg,
+    
+    #ff9ed8,
+    
+    #8edbff
+    
+    );
+    
+    
+    
+    display:flex;
+    
+    
+    justify-content:center;
+    
+    
+    align-items:center;
+    
+    
+    flex-direction:column;
+    
+    
+    color:white;
+    
+    
+    font-size:40px;
+    
+    
+    cursor:pointer;
+    
+    
+    position:relative;
+    
+    
+    transition:.5s;
+    
+    
+    box-shadow:
+    
+    0 20px 40px rgba(0,0,0,.15);
+    
+    
+    }
+    
+    
+    
+    
+    .love-bubble span{
+    
+    
+    position:absolute;
+    
+    
+    width:250px;
+    
+    
+    background:white;
+    
+    
+    color:#555;
+    
+    
+    padding:20px;
+    
+    
+    border-radius:20px;
+    
+    
+    font-size:15px;
+    
+    
+    bottom:-120px;
+    
+    
+    opacity:0;
+    
+    
+    transition:.4s;
+    
+    
+    pointer-events:none;
+    
+    
+    }
+    
+    
+    
+    
+    .love-bubble:hover{
+    
+    
+    transform:
+    
+    translateY(-20px);
+    
+    
+    }
+    
+    
+    
+    
+    .love-bubble:hover span{
+    
+    
+    opacity:1;
+    
+    
+    }
+    
+    
+    
+    
+    
+    /* =====================================================
+       ANGER METER
+    ===================================================== */
+    
+    
+    .anger-section{
+    
+    
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .anger-box{
+    
+    
+    max-width:600px;
+    
+    
+    margin:auto;
+    
+    
+    background:white;
+    
+    
+    padding:40px;
+    
+    
+    border-radius:30px;
+    
+    
+    box-shadow:
+    
+    0 20px 50px rgba(0,0,0,.1);
+    
+    
+    }
+    
+    
+    
+    #angerSlider{
+    
+    
+    width:100%;
+    
+    
+    height:15px;
+    
+    
+    accent-color:#ff4fa3;
+    
+    
+    }
+    
+    
+    
+    #angerText{
+    
+    
+    margin-top:30px;
+    
+    
+    color:#ff4fa3;
+    
+    
+    font-size:25px;
+    
+    
+    }
+    
+    
+    
+    
+    
+    /* =====================================================
+       FRIENDSHIP LEVEL
+    ===================================================== */
+    
+    
+    .level-section{
+    
+    
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .level-card{
+    
+    
+    max-width:600px;
+    
+    
+    margin:auto;
+    
+    
+    background:
+    
+    rgba(255,255,255,.5);
+    
+    
+    padding:40px;
+    
+    
+    border-radius:30px;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .level-bar{
+    
+    
+    height:30px;
+    
+    
+    background:#eee;
+    
+    
+    border-radius:30px;
+    
+    
+    overflow:hidden;
+    
+    
+    margin:30px 0;
+    
+    
+    }
+    
+    
+    
+    #friendshipProgress{
+    
+    
+    height:100%;
+    
+    
+    width:0;
+    
+    
+    background:
+    
+    linear-gradient(
+    
+    90deg,
+    
+    #ff5ebc,
+    
+    #7bdcff
+    
+    );
+    
+    
+    
+    transition:3s;
+    
+    
+    }
+    
+    
+    
+    
+    #levelText{
+    
+    
+    font-size:30px;
+    
+    
+    font-weight:bold;
+    
+    
+    color:#ff4fa3;
+    
+    
+    }
+    
+    
+    
+    
+    
+    /* =====================================================
+       SECRET SECTION
+    ===================================================== */
+    
+    
+    .secret-section{
+    
+    
+    padding:100px 20px;
+    
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    #secretButton{
+    
+    
+    padding:18px 45px;
+    
+    
+    border-radius:50px;
+    
+    
+    border:none;
+    
+    
+    background:
+    
+    linear-gradient(
+    
+    90deg,
+    
+    #ff5ebc,
+    
+    #7bdcff
+    
+    );
+    
+    
+    
+    color:white;
+    
+    
+    font-size:18px;
+    
+    
+    cursor:pointer;
+    
+    
+    }
+    
+    
+    
+    
+    
+    #secretBox{
+    
+    
+    max-width:650px;
+    
+    
+    margin:40px auto;
+    
+    
+    padding:40px;
+    
+    
+    background:white;
+    
+    
+    border-radius:30px;
+    
+    
+    line-height:2;
+    
+    
+    opacity:0;
+    
+    
+    transform:
+    
+    translateY(40px);
+    
+    
+    transition:1s;
+    
+    
+    }
+    
+    
+    
+    #secretBox.show{
+    
+    
+    opacity:1;
+    
+    
+    transform:
+    
+    translateY(0);
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* =====================================================
+       FINAL SECTION
+    ===================================================== */
+    
+    
+    .final-section{
+    
+    
+    min-height:100vh;
+    
+    
+    display:flex;
+    
+    
+    flex-direction:column;
+    
+    
+    justify-content:center;
+    
+    
+    align-items:center;
+    
+    
+    text-align:center;
+    
+    
+    padding:30px;
+    
+    
+    background:
+    
+    
+    linear-gradient(
+    
+    180deg,
+    
+    transparent,
+    
+    rgba(255,255,255,.5)
+    
+    );
+    
+    
+    }
+    
+    
+    
+    .final-section h1{
+    
+    
+    font-family:"Pacifico",cursive;
+    
+    
+    font-size:
+    
+    clamp(50px,8vw,100px);
+    
+    
+    color:#ff4fa3;
+    
+    
+    }
+    
+    
+    
+    .final-section p{
+    
+    
+    max-width:700px;
+    
+    
+    font-size:22px;
+    
+    
+    margin:20px;
+    
+    
+    line-height:1.8;
+    
+    
+    }
+    
+    
+    
+    
+    #wishButton{
+    
+    
+    padding:18px 45px;
+    
+    
+    border-radius:50px;
+    
+    
+    border:none;
+    
+    
+    background:#ff5ebc;
+    
+    
+    color:white;
+    
+    
+    font-size:18px;
+    
+    
+    cursor:pointer;
+    
+    
+    }
+    
+    
+    
+    
+    
+    footer{
+    
+    
+    padding:40px;
+    
+    
+    text-align:center;
+    
+    
+    background:white;
+    
+    
+    color:#ff4fa3;
+    
+    
+    font-family:"Pacifico",cursive;
+    
+    
+    font-size:25px;
+    
+    
+    }
+    
+    
+    
+    
+    
+    /* =====================================================
+       FLOATING HEARTS
+    ===================================================== */
+    
+    
+    .heart{
+    
+    
+    position:fixed;
+    
+    
+    bottom:-30px;
+    
+    
+    font-size:25px;
+    
+    
+    animation:
+    
+    float 8s linear;
+    
+    
+    z-index:10;
+    
+    
+    }
+    
+    
+    
+    
+    @keyframes float{
+    
+    
+    from{
+    
+    transform:translateY(0);
+    
+    opacity:1;
+    
+    }
+    
+    
+    to{
+    
+    transform:translateY(-120vh);
+    
+    opacity:0;
+    
+    }
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+    
+    
+    @media(max-width:700px){
+    
+    
+    
+    .hero h1{
+    
+    font-size:50px;
+    
+    }
+    
+    
+    .phone{
+    
+    width:90%;
+    
+    }
+    
+    
+    
+    .polaroid{
+    
+    width:220px;
+    
+    }
+    
+    
+    
+    .love-bubble{
+    
+    width:150px;
+    
+    height:150px;
+    
+    }
+    
+    
+    .final-section p{
+    
+    font-size:17px;
+    
+    }
+    
+    
+    }    
