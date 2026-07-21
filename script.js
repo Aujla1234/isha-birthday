@@ -636,7 +636,7 @@ Friendship Status:
 1000000%
 
 
-Made by Jot ❤️
+Made by Cj ❤️
 
 
 `);
