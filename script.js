@@ -358,124 +358,69 @@ spread:70
 ===================================== */
 
 
-const angerSlider=
+const angerSlider = document.getElementById("angerSlider");
+const angerText = document.getElementById("angerText");
 
-document.getElementById("angerSlider");
+if (angerSlider && angerText) {
 
+    angerSlider.addEventListener("input", () => {
 
-const angerText=
+        let value = angerSlider.value;
 
-document.getElementById("angerText");
+        if (value < 30) {
 
+            angerText.innerHTML = "Peaceful Isha 😇";
 
+        } else if (value < 70) {
 
-angerSlider.addEventListener("input",()=>{
+            angerText.innerHTML = "Warning ⚠️ Something happened 😂";
 
+        } else {
 
-let value=
+            angerText.innerHTML = "RUN CJ RUN 😭😂";
 
-angerSlider.value;
+        }
 
-
-
-if(value<30){
-
-
-angerText.innerHTML=
-
-"Peaceful Isha 😇";
-
+    });
 
 }
-
-
-
-else if(value<70){
-
-
-angerText.innerHTML=
-
-"Warning ⚠️ Something happened 😂";
-
-
-}
-
-
-
-else{
-
-
-angerText.innerHTML=
-
-"RUN JOT RUN 😭😂";
-
-
-}
-
-
-
-});
 
 /* =====================================
    FRIENDSHIP LEVEL
 ===================================== */
 
 
-const friendshipProgress =
+const friendshipProgress = document.getElementById("friendshipProgress");
+const levelText = document.getElementById("levelText");
 
-document.getElementById("friendshipProgress");
+if (friendshipProgress && levelText) {
 
+    setTimeout(() => {
 
-const levelText =
+        friendshipProgress.style.width = "100%";
 
-document.getElementById("levelText");
+        let count = 0;
 
+        const counter = setInterval(() => {
 
+            count += 5;
 
-setTimeout(()=>{
+            levelText.innerHTML = count + "%";
 
+            if (count >= 999) {
 
-friendshipProgress.style.width="100%";
+                clearInterval(counter);
 
+                levelText.innerHTML =
+                "999% ❤️<br>FOREVER BESTIES UNLOCKED 🔓";
 
-let count=0;
+            }
 
+        }, 50);
 
-const counter=setInterval(()=>{
-
-
-count+=5;
-
-
-levelText.innerHTML=
-
-count+"%";
-
-
-
-if(count>=999){
-
-
-clearInterval(counter);
-
-
-levelText.innerHTML=
-
-"999% ❤️<br>FOREVER BESTIES UNLOCKED 🔓";
-
+    }, 2000);
 
 }
-
-
-
-},50);
-
-
-
-},2000);
-
-
-
 
 
 
