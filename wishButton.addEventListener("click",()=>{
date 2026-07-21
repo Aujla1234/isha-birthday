@@ -274,79 +274,6 @@ spread:100
 
 
 
-/* =====================================
-   QUIZ SYSTEM
-===================================== */
-
-
-const answers=
-
-document.querySelectorAll(".answer");
-
-
-const quizResult=
-
-document.getElementById("quizResult");
-
-
-
-
-answers.forEach(button=>{
-
-
-button.addEventListener("click",()=>{
-
-
-const text=button.innerText;
-
-
-
-if(text.includes("Isha")){
-
-
-quizResult.innerHTML=
-
-"Correct 😂 She wins this one ❤️";
-
-
-}
-
-else if(text.includes("Both")){
-
-
-quizResult.innerHTML=
-
-"Actually... yes 😂 You both are dramatic.";
-
-}
-
-else{
-
-
-quizResult.innerHTML=
-
-"Nice try Jot 😂";
-
-}
-
-
-
-confetti({
-
-particleCount:80,
-
-spread:70
-
-});
-
-
-
-});
-
-
-
-});
-
 
 
 
@@ -442,30 +369,29 @@ document.getElementById("secretBox");
 
 
 
-secretButton.addEventListener("click",()=>{
+if(secretButton && secretBox){
+
+if(wishButton){
+
+wishButton.addEventListener("click",()=>{
 
 
 secretBox.classList.add("show");
 
 
-secretButton.innerHTML=
-
+secretButton.innerHTML =
 "Okay okay, you found it 😂❤️";
 
 
-
 confetti({
-
 particleCount:200,
-
 spread:120
-
 });
 
 
-
 });
 
+}
 
 
 
